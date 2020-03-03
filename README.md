@@ -1,15 +1,28 @@
 fastai v2 Dockerfile
 ===
 
-### Build from this repo
+### Run from Docker Hub
+
+`docker run --publish 8000:8888 --name fv fastaiv2-docker`
+
+This launches `jupyter` notebook into the source code.
+
+If you don't want this behaviour, run it with bash instead:
+
+`docker run -i -t fastaiv2 /bin/bash`
+
+### Build locally
 
 - `git clone`
 - `cd fastaiv2-docker`
-- `docker image build -t fastaiv2-docker:1.0.0 .`
+- `docker image build -t fastaiv2-docker:latest .`
 
 
-### Run the container
+This launches `jupyter` notebook into the source code.
 
-`docker container run --publish 8000:8888 --name fv fastaiv2-docker:1.0.0`
+
+#### Run the container
+
+`docker container run --publish 8000:8888 --name fv fastaiv2-docker:latest`
 
 Enjoy and please pull request!
